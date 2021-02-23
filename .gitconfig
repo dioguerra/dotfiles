@@ -1,0 +1,9 @@
+[user]
+	email = dy090.guerra@gmail.com 
+	name = Diogo Guerra
+	signingkey = 
+[push]
+	default = matching
+[diff]
+[gitreview]
+	username = dioguerra

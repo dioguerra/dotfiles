@@ -1,0 +1,6 @@
+#!/bin/bash
+
+text=$(xclip -o)
+url=$(curl -s -d text=\\"$text\\" https://stikked.web.cern.ch/stikked/api/create)
+
+echo $url | xclip -i
