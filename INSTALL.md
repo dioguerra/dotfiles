@@ -44,7 +44,7 @@ git submodule init
 git submodule update
 ```
 ```bash
-for f in .gitconfig .gitignore .i3 .i3status; do ln -s $HOME/ws/dotfiles/$f ~/$f; done
+for f in .gitconfig .gitignore .config/i3 .config/i3status; do ln -s $HOME/ws/dotfiles/$f ~/$f; done
 #.bash_aliases .bash_profile .bashrc .config/autorandr .config/terminator .gitmodules .gnupg .irssi .mailcap .mbsyncrc .msmtprc .notmuch-config .vim .viminfo .vimrc .weechat
 ```
 
@@ -71,8 +71,8 @@ scp -r lxplus.cern.ch:~/.ssh/id_rsa ~/.ssh
 
 ### docker
 ```bash
-sudo apt install docker.io
-sudo usermod -aG docker $USER
+apt install docker.io
+usermod -aG docker $USER
 ```
 
 ### kubectl
