@@ -34,6 +34,19 @@ apt-get install \
 pip install --user keystoneauth1[kerberos] python-magnumclient python-openstackclient
 ```
 
+## Work Tools
+```bash
+pip3 install --user virtualenvwrapper
+```
+DONOTFORGET TO ADD THIS TO BASHRC
+```
+# Virtual Envs
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/ws
+export VIRTUALENVWRAPPER_SCRIPT=$HOME/.local/bin/virtualenvwrapper.sh
+source $HOME/.local/bin/virtualenvwrapper_lazy.sh
+```
+
 ## dotfiles
 ```bash
 mkdir ws
