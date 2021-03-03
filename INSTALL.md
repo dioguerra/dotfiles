@@ -61,6 +61,11 @@ for f in .gitconfig .gitignore .config/i3 .config/i3status; do ln -s $HOME/ws/do
 #.bash_aliases .bash_profile .bashrc .config/autorandr .config/terminator .gitmodules .gnupg .irssi .mailcap .mbsyncrc .msmtprc .notmuch-config .vim .viminfo .vimrc .weechat
 ```
 
+## Scripts
+```bash
+for s in $(ls $HOME/ws/dotfiles/bin); do ln -s $HOME/ws/dotfiles/bin/$s $HOME/.local/bin/$s; done
+```
+
 ## SSH
 ```bash
 mkdir ~/.ssh/controlmasters
@@ -90,15 +95,16 @@ usermod -aG docker $USER
 
 ### kubectl
 ```bash
-mkdir -p $HOME/bin
-wget "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" -O $HOME/bin/kubectl
+mkdir -p $HOME/.local/bin
+wget "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" -O $HOME/.local/bin/kubectl
+bash -c "$HOME/.local/bin/kubectl completion bash > /etc/bash_completion.d/kubectl"
 ```
 
 ### helm
 ```bash
 wget https://get.helm.sh/helm-v3.5.0-linux-amd64.tar.gz
 tar zxvf helm-v3.5.0-linux-amd64.tar.gz
-mv linux-amd64/helm ~/bin
+mv linux-amd64/helm $HOME/.local/bin
 rm -rf helm-v3.5.0* linux-amd64
 ```
 
