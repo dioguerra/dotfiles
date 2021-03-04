@@ -23,7 +23,8 @@ sudo add-apt-repository ppa:agornostal/ulauncher -y
 apt-get update
 apt-get upgrade
 apt-get install \
-	xinit i3-wm dunst i3lock i3status suckless-tools compton hsetroot fonts-noto fonts-mplus fonts-font-awesome xsettingsd lxappearance
+	xinit i3-wm dunst i3status suckless-tools compton hsetroot fonts-noto fonts-mplus fonts-font-awesome xsettingsd lxappearance \
+        scrot imagemagick i3lock
 apt-get install \
 	git tig meld xclip terminator sshuttle \
 	spotify-client google-chrome-stable \
