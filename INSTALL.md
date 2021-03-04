@@ -57,8 +57,9 @@ git submodule init
 git submodule update
 ```
 ```bash
-for f in .gitconfig .gitignore .config/i3 .config/i3status; do ln -s $HOME/ws/dotfiles/$f ~/$f; done
-#.bash_aliases .bash_profile .bashrc .config/autorandr .config/terminator .gitmodules .gnupg .irssi .mailcap .mbsyncrc .msmtprc .notmuch-config .vim .viminfo .vimrc .weechat
+rm $HOME/.bashrc
+for f in .gitconfig .gitignore .config/i3 .config/i3status .bash_aliases .bashrc; do ln -s $HOME/ws/dotfiles/$f ~/$f; done
+#.bash_profile .config/autorandr .config/terminator .gitmodules .gnupg .irssi .mailcap .mbsyncrc .msmtprc .notmuch-config .vim .viminfo .vimrc .weechat
 ```
 
 ## Scripts
