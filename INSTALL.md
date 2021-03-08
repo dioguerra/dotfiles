@@ -39,14 +39,6 @@ pip install --user keystoneauth1[kerberos] python-magnumclient python-openstackc
 ```bash
 pip3 install --user virtualenvwrapper
 ```
-DONOTFORGET TO ADD THIS TO BASHRC
-```
-# Virtual Envs
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/ws
-export VIRTUALENVWRAPPER_SCRIPT=$HOME/.local/bin/virtualenvwrapper.sh
-source $HOME/.local/bin/virtualenvwrapper_lazy.sh
-```
 
 ## dotfiles
 ```bash
@@ -59,7 +51,7 @@ git submodule update
 ```
 ```bash
 rm $HOME/.bashrc
-for f in .gitconfig .gitignore .config/i3 .config/i3status .bash_aliases .bashrc; do ln -s $HOME/ws/dotfiles/$f ~/$f; done
+for f in .gitconfig .gitignore .config/i3 .config/i3status .bash_aliases .bashrc .trueline; do ln -s $HOME/ws/dotfiles/$f ~/$f; done
 #.bash_profile .config/autorandr .config/terminator .gitmodules .gnupg .irssi .mailcap .mbsyncrc .msmtprc .notmuch-config .vim .viminfo .vimrc .weechat
 ```
 
