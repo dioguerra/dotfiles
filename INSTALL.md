@@ -55,6 +55,12 @@ for f in .gitconfig .gitignore .config/i3 .config/i3status .bash_aliases .bashrc
 #.bash_profile .config/autorandr .config/terminator .gitmodules .gnupg .irssi .mailcap .mbsyncrc .msmtprc .notmuch-config .vim .viminfo .vimrc .weechat
 ```
 
+## Console
+```bash
+cd $HOME/ws/dotfiles/nerd-fonts
+./install.sh -U -l --fontawesome --fontlinux --octicons --pomicons
+```
+
 ## Scripts
 ```bash
 for s in $(ls $HOME/ws/dotfiles/bin); do ln -s $HOME/ws/dotfiles/bin/$s $HOME/.local/bin/$s; done
