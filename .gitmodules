@@ -1,9 +1,9 @@
 [submodule ".config/i3/i3lock-fancy-multimonitor"]
 	path = .config/i3/i3lock-fancy-multimonitor
 	url = https://github.com/guimeira/i3lock-fancy-multimonitor.git
-[submodule "/home/dtomasgu/ws/dotfiles/.trueline"]
-	path = /home/dtomasgu/ws/dotfiles/.trueline
-	url = https://github.com/petobens/trueline
 [submodule "nerd-fonts"]
 	path = nerd-fonts
 	url = git@github.com:ryanoasis/nerd-fonts.git
+[submodule ".trueline"]
+	path = .trueline
+	url = https://github.com/petobens/trueline
