@@ -2,6 +2,11 @@
 	email = dy090.guerra@gmail.com 
 	name = Diogo Guerra
 	signingkey = 
+[color]
+  # Enable colors in color-supporting terminals
+  ui = auto
+[alias]
+	c = commit -s
 [push]
 	default = matching
 [diff]
