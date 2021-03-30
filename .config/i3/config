@@ -9,7 +9,6 @@ font pango: Noto Sans 8
 floating_modifier $mod
 
 #autostart
-exec --no-startup-id hsetroot -center ~/Pictures/wallpapers/osaka_castle.jpg
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
 
