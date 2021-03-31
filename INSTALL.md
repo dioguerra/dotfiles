@@ -26,7 +26,7 @@ apt-get install \
 	xinit i3-wm dunst i3status suckless-tools compton hsetroot fonts-noto fonts-mplus fonts-font-awesome xsettingsd lxappearance \
         scrot imagemagick i3lock
 apt-get install \
-	git tig meld xclip terminator sshuttle \
+	git tig meld xclip terminator sshuttle gnome-screenshot \
 	spotify-client google-chrome-stable \
 	python3 python3-pip \
 	openafs-client openafs-krb5
