@@ -99,8 +99,13 @@ export VIRTUALENVWRAPPER_SCRIPT=$HOME/.local/bin/virtualenvwrapper.sh
 source $HOME/.local/bin/virtualenvwrapper_lazy.sh
 
 # Prompt-1
-#export PS1='\[\e[31m\]\u\[\e[90m\]@\[\e[34m\]\h \[\e[33m\]\w\[\e[37m\]$(__git_ps1 " (%s)")\[\e[90m\]\$ \[\e[39m\]'
-#export PROMPT_DIRTRIM=3
+# curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+source ~/.git-prompt.sh
+export PS1='\[\e[31m\]\u\[\e[90m\]@\[\e[34m\]\h \[\e[33m\]\w\[\e[37m\]$(__git_ps1 " (%s)")\[\e[90m\]\$ \[\e[39m\]'
+export PROMPT_DIRTRIM=3
 
 # Prompt-2
-source $HOME/.trueline/trueline.sh
+#source $HOME/.trueline/trueline.sh
+
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH="$HOME/go"
