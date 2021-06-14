@@ -3,7 +3,7 @@
 	url = https://github.com/guimeira/i3lock-fancy-multimonitor.git
 [submodule "nerd-fonts"]
 	path = nerd-fonts
-	url = git@github.com:ryanoasis/nerd-fonts.git
+	url = https://github.com/ryanoasis/nerd-fonts.git
 [submodule ".trueline"]
 	path = .trueline
 	url = https://github.com/petobens/trueline

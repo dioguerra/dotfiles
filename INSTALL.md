@@ -58,6 +58,7 @@ for f in .gitconfig .gitignore .config/i3 .config/i3status .bash_aliases .bashrc
 ## Console
 ```bash
 cd $HOME/ws/dotfiles/nerd-fonts
+#./install.sh -l -C -S -T -A
 ./install.sh -U -l --fontawesome --fontlinux --octicons --pomicons
 ```
 
