@@ -109,3 +109,6 @@ export PROMPT_DIRTRIM=3
 
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH="$HOME/go"
+
+# DualScreens
+xrandr --output HDMI-A-0 --auto --left-of eDP
