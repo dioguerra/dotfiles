@@ -14,7 +14,7 @@ exec --no-startup-id compton -b
 
 # lock computer
 # blur: https://legacy.imagemagick.org/Usage/blur/#blur_args
-bindsym $mod+p exec /home/dtomasgu/.config/i3/i3lock-fancy-multimonitor/lock --blur=5x4
+bindsym $mod+p exec $HOME/.config/i3/i3lock-fancy-multimonitor/lock --blur=5x4
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -165,7 +165,7 @@ bar {
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 4
 assign [class=URxvt] 1
-assign [class=Google*|Transmission-gtk] 2
+assign [class=spotify] 0
 assign [class=Thunar|File-roller] 3
 assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*] 4
 assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
