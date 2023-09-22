@@ -6,4 +6,10 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+# We need to download dotfiles
+sudo apt install -y git
+mkdir $HOME/ws
+git clone https://github.com/dioguerra/dotfiles.git $HOME/ws/dotfiles
+
+# Start main install
 ./INSTALL.sh
