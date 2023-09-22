@@ -41,9 +41,6 @@ apt-get install \
 	python3 python3-pip \
 	openafs-client openafs-krb5
 ```
-```bash
-pip install --user keystoneauth1[kerberos] python-magnumclient python-openstackclient
-```
 
 ## Work Tools
 ```bash
@@ -99,7 +96,7 @@ scp -r lxplus.cern.ch:~/.ssh/id_rsa ~/.ssh
 #```
 
 ## Container Tools
-
+# TODO: Setup auto containerd+nerdctl installation
 ### docker
 ```bash
 apt install docker.io
@@ -122,7 +119,6 @@ rm -rf helm-v3.5.0* linux-amd64
 ```
 
 ## Media & Chat
-
 ### zoom
 ```bash
 wget https://zoom.us/client/latest/zoom_amd64.deb
