@@ -14,4 +14,4 @@ fi
 alias ka="kubectl --all-namespaces=true"
 alias ks="kubectl -n kube-system"
 alias kn="kubectl -n "
-alias kga="clear && kubectl -n kubesystem get all --all-namespaces "
+alias kga="clear && kubectl get all --all-namespaces "
