@@ -59,8 +59,7 @@ git submodule update
 
 ```bash
 rm $HOME/.bashrc
-for f in .gitconfig .gitignore .config/i3 .config/i3status .bash_aliases .bashrc .trueline .config/terminator .vimrc; do ln -s $HOME/ws/dotfiles/$f ~/$f; done
-#.bash_profile .config/autorandr .gitmodules .gnupg .irssi .mailcap .mbsyncrc .msmtprc .notmuch-config .vim .viminfo .vimrc .weechat
+for f in $(find . -maxdepth 1 -name '\.*'); do ln -s $HOME/ws/dotfiles/$f ~/$f; done
 ```
 
 ## Visual
