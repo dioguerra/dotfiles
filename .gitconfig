@@ -1,5 +1,5 @@
 [user]
-	email = diogo.filipe.tomas.guerra@cern.ch
+	email = dy090.guerra@gmail.com
 	name = Diogo Guerra
 	signingkey = 
 [color]
@@ -12,3 +12,5 @@
 [diff]
 [gitreview]
 	username = dioguerra
+[safe]
+	directory = /afs/cern.ch/user/d/dtomasgu/ws/dotfiles
