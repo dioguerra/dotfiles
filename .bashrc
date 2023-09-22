@@ -111,4 +111,10 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH="$HOME/go"
 
 # DualScreens
-xrandr --output HDMI-A-0 --auto --left-of eDP
+
+## Rust
+. "$HOME/.cargo/env"
+
+## Other
+export EDITOR=vim
+export PATH=$PATH:/opt/cmake-3.27.0-rc2-linux-x86_64/bin/
