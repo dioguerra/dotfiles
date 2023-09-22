@@ -24,7 +24,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size15'"
-#bindsym $mod+d exec ulauncher
+bindsym $mod+d exec ulauncher
 
 #change volume
 bindsym XF86AudioRaiseVolume exec amixer -c 2 -q set Master 5%+

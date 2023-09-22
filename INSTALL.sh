@@ -15,7 +15,15 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
-sudo add-apt-repository ppa:agornostal/ulauncher -y
+# Add Ulauncher PPA
+mkdir /etc/apt/keyrings
+echo "
+deb [signed-by=/etc/apt/keyrings/ulauncher.gpg] https://ppa.launchpadcontent.net/agornostal/ulauncher/ubuntu jammy main
+deb-src [signed-by=/etc/apt/keyrings/ulauncher.gpg] https://ppa.launchpadcontent.net/agornostal/ulauncher/ubuntu jammy main
+" | sudo tee /etc/apt/sources.list.d/ulauncher.list
+
+curl 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xfaf1020699503176' -o /etc/apt/keyrings/ulauncher.key
+cat /etc/apt/keyrings/ulauncher.key | apt-key --keyring /etc/apt/keyrings/ulauncher.gpg add -
 ```
 
 ## Apt Packages
@@ -49,14 +57,16 @@ cd dotfiles
 git submodule init
 git submodule update
 ```
+
 ```bash
 rm $HOME/.bashrc
 for f in .gitconfig .gitignore .config/i3 .config/i3status .bash_aliases .bashrc .trueline .config/terminator; do ln -s $HOME/ws/dotfiles/$f ~/$f; done
 #.bash_profile .config/autorandr .gitmodules .gnupg .irssi .mailcap .mbsyncrc .msmtprc .notmuch-config .vim .viminfo .vimrc .weechat
 ```
 
-## Console
+## Visual
 ```bash
+apt install ulauncher --no-install-recommends --no-install-suggests
 cd $HOME/ws/dotfiles/nerd-fonts
 #./install.sh -l -C -S -T -A
 ./install.sh -U -l --fontawesome --fontlinux --octicons --pomicons
