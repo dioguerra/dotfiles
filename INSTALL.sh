@@ -102,19 +102,20 @@ apt install docker.io
 usermod -aG docker $USER
 ```
 
-### kubectl
+### Kubernetes
+# kubectl
 ```bash
 mkdir -p $HOME/.local/bin
 wget "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" -O $HOME/.local/bin/kubectl
 bash -c "$HOME/.local/bin/kubectl completion bash > /etc/bash_completion.d/kubectl"
 ```
-
-### helm
+# helm
 ```bash
-wget https://get.helm.sh/helm-v3.5.0-linux-amd64.tar.gz
-tar zxvf helm-v3.5.0-linux-amd64.tar.gz
+HELM_LATEST=$(curl -s https://github.com/helm/helm/releases | grep "Download Helm" | grep -oE "v[0-9]+\.[0-9]+\.[0-9]+\." | head -n1 | rev | cut -c2- | rev)
+curl https://get.helm.sh/helm-${HELM_LATEST}-linux-amd64.tar.gz -o helm-latest.tar.gz
+tar zxvf helm-latest.tar.gz
 mv linux-amd64/helm $HOME/.local/bin
-rm -rf helm-v3.5.0* linux-amd64
+rm -rf helm-latest.tar.gz linux-amd64
 ```
 
 ## Media & Chat
