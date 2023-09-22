@@ -1,5 +1,7 @@
 # Fresh Installation
 
+OS_VERSION_CODENAME=$(cat /etc/os-release | grep VERSION_CODENAME | sed 's/VERSION_CODENAME=//')
+
 ## From server only installs
 
 ```bash
@@ -18,8 +20,8 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 # Add Ulauncher PPA
 mkdir /etc/apt/keyrings
 echo "
-deb [signed-by=/etc/apt/keyrings/ulauncher.gpg] https://ppa.launchpadcontent.net/agornostal/ulauncher/ubuntu jammy main
-deb-src [signed-by=/etc/apt/keyrings/ulauncher.gpg] https://ppa.launchpadcontent.net/agornostal/ulauncher/ubuntu jammy main
+deb [signed-by=/etc/apt/keyrings/ulauncher.gpg] https://ppa.launchpadcontent.net/agornostal/ulauncher/ubuntu ${OS_VERSION_CODENAME} main
+deb-src [signed-by=/etc/apt/keyrings/ulauncher.gpg] https://ppa.launchpadcontent.net/agornostal/ulauncher/ubuntu ${OS_VERSION_CODENAME} main
 " | sudo tee /etc/apt/sources.list.d/ulauncher.list
 
 curl 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xfaf1020699503176' -o /etc/apt/keyrings/ulauncher.key
